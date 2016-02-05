@@ -1,4 +1,4 @@
-[![Build Status](https://img.shields.io/travis/GabrielMassana/CocoaPods-Search/master.svg?style=flat-square)](https://travis-ci.org/GabrielMassana/CocoaPods-Search)
+[![Build Status](https://img.shields.io/travis/GabrielMassana/CocoaPods-Search/dev.svg?style=flat-square)](https://travis-ci.org/GabrielMassana/CocoaPods-Search)
 
 
 # CocoaPods-Search
