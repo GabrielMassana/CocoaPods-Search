@@ -7,4 +7,4 @@ before_install:
    - sudo gem install cocoapods -v '0.39.0'  
 
 script: 
-   xctool -workspace CoreDataFullStack.xcworkspace -scheme CoreDataFullStack build -sdk iphonesimulator
+   xctool -workspace Cocoapods.xcworkspace -scheme Cocoapods build -sdk iphonesimulator
