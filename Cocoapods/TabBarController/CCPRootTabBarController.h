@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  CCPRootTabBarController.h
 //  Cocoapods
 //
 //  Created by Gabriel Massana on 5/2/16.
@@ -8,10 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CCPAppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
-
+@interface CCPRootTabBarController : UITabBarController
 
 @end
-
