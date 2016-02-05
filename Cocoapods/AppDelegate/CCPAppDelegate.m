@@ -12,6 +12,8 @@
 
 @interface CCPAppDelegate ()
 
+@property (nonatomic, strong) CCPRootTabBarController *rootTabBarController;
+
 @end
 
 @implementation CCPAppDelegate
@@ -59,10 +61,26 @@
     {
         _window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
         _window.tintAdjustmentMode = UIViewTintAdjustmentModeNormal;
-        _window.rootViewController = [[CCPRootTabBarController alloc] init];
+        _window.rootViewController = self.rootTabBarController;
     }
     
     return _window;
+}
+
+#pragma mark - RootTabBarController
+
+- (CCPRootTabBarController *)rootTabBarController
+{
+    if (!_rootTabBarController)
+    {
+        _rootTabBarController = [[CCPRootTabBarController alloc] init];
+        
+        _rootTabBarController.tabBar.items[0].title = NSLocalizedString(@"Pods", nil);
+        _rootTabBarController.tabBar.items[1].title = NSLocalizedString(@"Author", nil);
+        _rootTabBarController.tabBar.items[2].title = NSLocalizedString(@"Settings", nil);
+    }
+    
+    return _rootTabBarController;
 }
 
 @end

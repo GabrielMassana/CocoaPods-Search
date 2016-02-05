@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  UIColor+CCPColor.h
 //  Cocoapods
 //
 //  Created by Gabriel Massana on 5/2/16.
@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CCPViewController : UIViewController
+@interface UIColor (CCPColor)
+
++ (UIColor *)ccp_F2161D;
++ (UIColor *)ccp_380200;
 
 @end
-
