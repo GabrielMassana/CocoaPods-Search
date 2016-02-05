@@ -1,12 +1,11 @@
 [![Build Status](https://img.shields.io/travis/GabrielMassana/CocoaPods-Search/dev.svg?style=flat-square)](https://travis-ci.org/GabrielMassana/CocoaPods-Search)
 
-
 # CocoaPods-Search
 
 http://blog.cocoapods.org/search-engine/
 https://github.com/CocoaPods/search.cocoapods.org/blob/eeb25b8aad023936f0db9f19a73ce0ac4985d012/lib/search.rb#L70-L78
 
-e.g.
+#### e.g.
 
 http://search.cocoapods.org/api/v1/pods.flat.hash.json?query=summary:afnetworking
 http://search.cocoapods.org/api/v1/pods.flat.hash.json?query=author:gabriel%20author:massana
