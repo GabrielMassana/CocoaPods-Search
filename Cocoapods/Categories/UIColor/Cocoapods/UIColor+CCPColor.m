@@ -14,7 +14,7 @@
 
 @implementation UIColor (CCPColor)
 
-+ (UIColor *)ccp_F2161D
++ (UIColor *)ccp_redRibbon
 {
     return [UIColor ccp_colorWithHex:@"F2161D"];
 }
