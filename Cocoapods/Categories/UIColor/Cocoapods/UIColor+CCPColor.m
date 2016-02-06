@@ -19,7 +19,7 @@
     return [UIColor ccp_colorWithHex:@"F2161D"];
 }
 
-+ (UIColor *)ccp_380200
++ (UIColor *)ccp_temptress
 {
     return [UIColor ccp_colorWithHex:@"380200"];
 }
