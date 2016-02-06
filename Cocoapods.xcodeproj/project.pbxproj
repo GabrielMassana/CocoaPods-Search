@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6D61C0310A00E99AF001CE9C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97E734B328C81475DF4C0753 /* libPods.a */; };
+		7A3E25781C656EDC00006313 /* CCPPodsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A3E25771C656EDC00006313 /* CCPPodsViewController.m */; };
 		7A5E35151C65559A0087ED40 /* CCPAuthorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A5E35141C65559A0087ED40 /* CCPAuthorViewController.m */; };
 		7A5E351B1C6555C10087ED40 /* CCPSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A5E351A1C6555C10087ED40 /* CCPSettingsViewController.m */; };
 		7A5E351F1C655A470087ED40 /* UIColor+CCPColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A5E351E1C655A470087ED40 /* UIColor+CCPColor.m */; };
@@ -16,7 +17,6 @@
 		7AB0396B1C6551D4004AC370 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AB039601C6551D4004AC370 /* Assets.xcassets */; };
 		7AB0396D1C6551D4004AC370 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AB039641C6551D4004AC370 /* main.m */; };
 		7AB039711C6552DB004AC370 /* CCPRootTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AB039701C6552DB004AC370 /* CCPRootTabBarController.m */; };
-		7ABFDEF11C656A1B00A75AFC /* CCPPodsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ABFDEF01C656A1B00A75AFC /* CCPPodsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +31,8 @@
 
 /* Begin PBXFileReference section */
 		058104FAC1FBE61F75F827FB /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		7A3E25761C656EDC00006313 /* CCPPodsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCPPodsViewController.h; sourceTree = "<group>"; };
+		7A3E25771C656EDC00006313 /* CCPPodsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCPPodsViewController.m; sourceTree = "<group>"; };
 		7A5E35131C65559A0087ED40 /* CCPAuthorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCPAuthorViewController.h; sourceTree = "<group>"; };
 		7A5E35141C65559A0087ED40 /* CCPAuthorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCPAuthorViewController.m; sourceTree = "<group>"; };
 		7A5E35191C6555C10087ED40 /* CCPSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCPSettingsViewController.h; sourceTree = "<group>"; };
@@ -48,8 +50,6 @@
 		7AB039641C6551D4004AC370 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7AB0396F1C6552DB004AC370 /* CCPRootTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCPRootTabBarController.h; sourceTree = "<group>"; };
 		7AB039701C6552DB004AC370 /* CCPRootTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCPRootTabBarController.m; sourceTree = "<group>"; };
-		7ABFDEEF1C656A1B00A75AFC /* CCPPodsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCPPodsViewController.h; sourceTree = "<group>"; };
-		7ABFDEF01C656A1B00A75AFC /* CCPPodsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCPPodsViewController.m; sourceTree = "<group>"; };
 		8F2E784DE41FE0926737846C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		97E734B328C81475DF4C0753 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -79,6 +79,15 @@
 				97E734B328C81475DF4C0753 /* libPods.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7A3E25751C656EDC00006313 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				7A3E25761C656EDC00006313 /* CCPPodsViewController.h */,
+				7A3E25771C656EDC00006313 /* CCPPodsViewController.m */,
+			);
+			path = Pod;
 			sourceTree = "<group>";
 		};
 		7A5E35101C6555700087ED40 /* Author */ = {
@@ -261,8 +270,8 @@
 		7AB039661C6551D4004AC370 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				7A3E25751C656EDC00006313 /* Pod */,
 				7A5E35101C6555700087ED40 /* Author */,
-				7ABFDEEE1C656A1B00A75AFC /* Pods */,
 				7A5E35121C6555700087ED40 /* Settings */,
 			);
 			path = ViewControllers;
@@ -273,15 +282,6 @@
 			children = (
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		7ABFDEEE1C656A1B00A75AFC /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				7ABFDEEF1C656A1B00A75AFC /* CCPPodsViewController.h */,
-				7ABFDEF01C656A1B00A75AFC /* CCPPodsViewController.m */,
-			);
-			path = Pods;
 			sourceTree = "<group>";
 		};
 		B35DA8CFB98AC2E80648C7A2 /* Pods */ = {
@@ -444,7 +444,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A5E35151C65559A0087ED40 /* CCPAuthorViewController.m in Sources */,
-				7ABFDEF11C656A1B00A75AFC /* CCPPodsViewController.m in Sources */,
+				7A3E25781C656EDC00006313 /* CCPPodsViewController.m in Sources */,
 				7AB0396D1C6551D4004AC370 /* main.m in Sources */,
 				7A5E351B1C6555C10087ED40 /* CCPSettingsViewController.m in Sources */,
 				7A5E351F1C655A470087ED40 /* UIColor+CCPColor.m in Sources */,
