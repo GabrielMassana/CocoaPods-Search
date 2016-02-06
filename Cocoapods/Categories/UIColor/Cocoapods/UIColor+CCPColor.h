@@ -10,7 +10,7 @@
 
 @interface UIColor (CCPColor)
 
-+ (UIColor *)ccp_F2161D;
-+ (UIColor *)ccp_380200;
++ (UIColor *)ccp_redRibbon;
++ (UIColor *)ccp_temptress;
 
 @end
