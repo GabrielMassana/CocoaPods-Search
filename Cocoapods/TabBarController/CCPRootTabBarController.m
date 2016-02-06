@@ -15,9 +15,13 @@
 
 @interface CCPRootTabBarController ()
 
-@property (nonatomic, strong) CCPAuthorViewController *authorViewController;
+@property (nonatomic, strong) CCPAuthorViewController *authorsViewController;
 @property (nonatomic, strong) CCPPodsViewController *podsViewController;
 @property (nonatomic, strong) CCPSettingsViewController *settingsViewController;
+
+@property (nonatomic, strong) UINavigationController *authorsNavigationController;
+@property (nonatomic, strong) UINavigationController *podsNavigationController;
+@property (nonatomic, strong) UINavigationController *settingsNavigationController;
 
 @end
 
@@ -31,7 +35,7 @@
     
     if (self)
     {
-        self.viewControllers = @[self.podsViewController, self.authorViewController , self.settingsViewController];
+        self.viewControllers = @[self.podsNavigationController, self.authorsNavigationController , self.settingsNavigationController];
         
         [UITabBarItem.appearance setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor ccp_F2161D]}
                                                forState:UIControlStateNormal];
@@ -50,21 +54,21 @@
     if (!_podsViewController)
     {
         _podsViewController = [[CCPPodsViewController alloc] init];
-        self.tabBar.items[0].title = NSLocalizedString(@"Pods", nil);
+        _podsViewController.title = NSLocalizedString(@"Pods", nil);
     }
     
     return _podsViewController;
 }
 
-- (CCPAuthorViewController *)authorViewController
+- (CCPAuthorViewController *)authorsViewController
 {
-    if (!_authorViewController)
+    if (!_authorsViewController)
     {
-        _authorViewController = [[CCPAuthorViewController alloc] init];
-        self.tabBar.items[0].title = NSLocalizedString(@"Author", nil);
+        _authorsViewController = [[CCPAuthorViewController alloc] init];
+        _authorsViewController.title = NSLocalizedString(@"Authors", nil);
     }
     
-    return _authorViewController;
+    return _authorsViewController;
 }
 
 - (CCPSettingsViewController *)settingsViewController
@@ -72,10 +76,45 @@
     if (!_settingsViewController)
     {
         _settingsViewController = [[CCPSettingsViewController alloc] init];
-        self.tabBar.items[0].title = NSLocalizedString(@"Settings", nil);
+        _settingsViewController.title = NSLocalizedString(@"Settings", nil);
     }
     
     return _settingsViewController;
+}
+
+#pragma mark - NavigationController
+
+- (UINavigationController *)podsNavigationController
+{
+    if (!_podsNavigationController)
+    {
+        _podsNavigationController = [[UINavigationController alloc] initWithRootViewController:self.podsViewController];
+        _podsNavigationController.tabBarItem.image = [UIImage imageNamed:@"icon-tabbar-pods"];
+    }
+    
+    return _podsNavigationController;
+}
+
+- (UINavigationController *)authorsNavigationController
+{
+    if (!_authorsNavigationController)
+    {
+        _authorsNavigationController = [[UINavigationController alloc] initWithRootViewController:self.authorsViewController];
+        _authorsNavigationController.tabBarItem.image = [UIImage imageNamed:@"icon-tabbar-authors"];
+    }
+    
+    return _authorsNavigationController;
+}
+
+- (UINavigationController *)settingsNavigationController
+{
+    if (!_settingsNavigationController)
+    {
+        _settingsNavigationController = [[UINavigationController alloc] initWithRootViewController:self.settingsViewController];
+        _settingsNavigationController.tabBarItem.image = [UIImage imageNamed:@"icon-tabbar-settings"];
+    }
+    
+    return _settingsNavigationController;
 }
 
 @end
