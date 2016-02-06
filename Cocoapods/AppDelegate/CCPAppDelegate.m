@@ -74,10 +74,6 @@
     if (!_rootTabBarController)
     {
         _rootTabBarController = [[CCPRootTabBarController alloc] init];
-        
-        _rootTabBarController.tabBar.items[0].title = NSLocalizedString(@"Pods", nil);
-        _rootTabBarController.tabBar.items[1].title = NSLocalizedString(@"Author", nil);
-        _rootTabBarController.tabBar.items[2].title = NSLocalizedString(@"Settings", nil);
     }
     
     return _rootTabBarController;
