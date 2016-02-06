@@ -37,10 +37,10 @@
     {
         self.viewControllers = @[self.podsNavigationController, self.authorsNavigationController , self.settingsNavigationController];
         
-        [UITabBarItem.appearance setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor ccp_F2161D]}
+        [UITabBarItem.appearance setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor ccp_redRibbon]}
                                                forState:UIControlStateNormal];
         
-        [UITabBarItem.appearance setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor ccp_380200]}
+        [UITabBarItem.appearance setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor ccp_temptress]}
                                                forState:UIControlStateSelected];
     }
     
