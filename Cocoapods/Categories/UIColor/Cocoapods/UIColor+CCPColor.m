@@ -5,27 +5,23 @@
 //  Created by Gabriel Massana on 5/2/16.
 //  Copyright © 2016 Gabriel Massana. All rights reserved.
 //
-//  http://www.rgbtohex.net/
+// Naming: http://chir.ag/projects/name-that-color/
 //
 
 #import "UIColor+CCPColor.h"
+
+#import "UIColor+CCPHex.h"
 
 @implementation UIColor (CCPColor)
 
 + (UIColor *)ccp_F2161D
 {
-    return [UIColor colorWithRed:242.0f / 255.0f
-                           green:22.0f / 255.0f
-                            blue:29.0f / 255.0f
-                           alpha:1.0f];
+    return [UIColor ccp_colorWithHex:@"F2161D"];
 }
 
 + (UIColor *)ccp_380200
 {
-    return [UIColor colorWithRed:56.0f / 255.0f
-                           green:2.0f / 255.0f
-                            blue:0.0f / 255.0f
-                           alpha:1.0f];
+    return [UIColor ccp_colorWithHex:@"380200"];
 }
 
 @end
