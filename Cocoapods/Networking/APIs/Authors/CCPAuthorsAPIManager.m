@@ -8,18 +8,15 @@
 
 #import "CCPAuthorsAPIManager.h"
 
+#import "CCPAuthorRequest.h"
+
 @implementation CCPAuthorsAPIManager
 
 + (void)retrieveAuthorsContainingSearchTerm:(NSString *)searchTerm
                                     success:(CCPNetworkingOnSuccess)success
                                     failure:(CCPNetworkingOnFailure)failure
 {
-    CNMRequest *request = [[CNMRequest alloc] init];
-    
-    //TODO scape space to %20author:
-    NSString *stringURL = [NSString stringWithFormat:@"https://search.cocoapods.org/api/v1/pods.flat.hash.json?query=author:%@", searchTerm];
-    
-    request.URL = [NSURL URLWithString:stringURL];
+    CCPAuthorRequest *request = [CCPAuthorRequest requestToSearchAuthorWithSearchTerm:searchTerm];
     
     CNMURLSessionDataTask *task = [[CNMSession defaultSession] dataTaskFromRequest:request];
 

@@ -20,6 +20,8 @@
 		7AB039711C6552DB004AC370 /* CCPRootTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AB039701C6552DB004AC370 /* CCPRootTabBarController.m */; };
 		7AD4DB921C6742D900B457EF /* (null) in Sources */ = {isa = PBXBuildFile; };
 		7AD4DB961C674F3F00B457EF /* (null) in Sources */ = {isa = PBXBuildFile; };
+		7AD4DB9D1C67D1FB00B457EF /* CCPAuthorRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD4DB9C1C67D1FB00B457EF /* CCPAuthorRequest.m */; };
+		7AD4DBA11C67D33700B457EF /* CCPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD4DBA01C67D33700B457EF /* CCPRequest.m */; };
 		C02B29FD1C676503002B292E /* CCPAbstractAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C02B29FC1C676503002B292E /* CCPAbstractAPIManager.m */; };
 		C02B2A001C67650E002B292E /* CCPAuthorsAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C02B29FF1C67650E002B292E /* CCPAuthorsAPIManager.m */; };
 /* End PBXBuildFile section */
@@ -58,6 +60,10 @@
 		7AB0396F1C6552DB004AC370 /* CCPRootTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCPRootTabBarController.h; sourceTree = "<group>"; };
 		7AB039701C6552DB004AC370 /* CCPRootTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCPRootTabBarController.m; sourceTree = "<group>"; };
 		7AD4DB971C6753F700B457EF /* Cocoapods-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Cocoapods-Prefix.pch"; sourceTree = "<group>"; };
+		7AD4DB9B1C67D1FB00B457EF /* CCPAuthorRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCPAuthorRequest.h; sourceTree = "<group>"; };
+		7AD4DB9C1C67D1FB00B457EF /* CCPAuthorRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCPAuthorRequest.m; sourceTree = "<group>"; };
+		7AD4DB9F1C67D33700B457EF /* CCPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCPRequest.h; sourceTree = "<group>"; };
+		7AD4DBA01C67D33700B457EF /* CCPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCPRequest.m; sourceTree = "<group>"; };
 		8F2E784DE41FE0926737846C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		97E734B328C81475DF4C0753 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C02B29FB1C676503002B292E /* CCPAbstractAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCPAbstractAPIManager.h; sourceTree = "<group>"; };
@@ -312,6 +318,7 @@
 			isa = PBXGroup;
 			children = (
 				7AD4DB8E1C6741E400B457EF /* APIs */,
+				7AD4DB981C67D19D00B457EF /* Requests */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -339,6 +346,33 @@
 			children = (
 				C02B29FB1C676503002B292E /* CCPAbstractAPIManager.h */,
 				C02B29FC1C676503002B292E /* CCPAbstractAPIManager.m */,
+			);
+			path = Abstract;
+			sourceTree = "<group>";
+		};
+		7AD4DB981C67D19D00B457EF /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				7AD4DB9E1C67D32500B457EF /* Abstract */,
+				7AD4DB9A1C67D1D600B457EF /* Author */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		7AD4DB9A1C67D1D600B457EF /* Author */ = {
+			isa = PBXGroup;
+			children = (
+				7AD4DB9B1C67D1FB00B457EF /* CCPAuthorRequest.h */,
+				7AD4DB9C1C67D1FB00B457EF /* CCPAuthorRequest.m */,
+			);
+			path = Author;
+			sourceTree = "<group>";
+		};
+		7AD4DB9E1C67D32500B457EF /* Abstract */ = {
+			isa = PBXGroup;
+			children = (
+				7AD4DB9F1C67D33700B457EF /* CCPRequest.h */,
+				7AD4DBA01C67D33700B457EF /* CCPRequest.m */,
 			);
 			path = Abstract;
 			sourceTree = "<group>";
@@ -508,7 +542,9 @@
 				7A3E25781C656EDC00006313 /* CCPPodsViewController.m in Sources */,
 				7A3060A91C66940F009025D3 /* UIColor+CCPColor.m in Sources */,
 				7AB0396D1C6551D4004AC370 /* main.m in Sources */,
+				7AD4DBA11C67D33700B457EF /* CCPRequest.m in Sources */,
 				7A5E351B1C6555C10087ED40 /* CCPSettingsViewController.m in Sources */,
+				7AD4DB9D1C67D1FB00B457EF /* CCPAuthorRequest.m in Sources */,
 				7AB039711C6552DB004AC370 /* CCPRootTabBarController.m in Sources */,
 				7A3060AC1C669446009025D3 /* UIColor+CCPHex.m in Sources */,
 				7AB0396A1C6551D4004AC370 /* CCPAppDelegate.m in Sources */,

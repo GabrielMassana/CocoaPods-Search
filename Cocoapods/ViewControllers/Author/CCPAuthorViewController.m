@@ -20,7 +20,7 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     
-    [CCPAuthorsAPIManager retrieveAuthorsContainingSearchTerm:@"Laguna"
+    [CCPAuthorsAPIManager retrieveAuthorsContainingSearchTerm:@"William Boles"
                                                       success:^(id result)
     {
         NSLog(@"error = %@", result);
