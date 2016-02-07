@@ -15,6 +15,7 @@
 @interface CCPAuthorsAPIManager : CCPAbstractAPIManager
 
 + (void)retrieveAuthorsContainingSearchTerm:(NSString *)searchTerm
-                            networkingError:(CCPNetworkingError)networkingError;
+                                    success:(CCPNetworkingOnSuccess)success
+                                    failure:(CCPNetworkingOnFailure)failure;
 
 @end

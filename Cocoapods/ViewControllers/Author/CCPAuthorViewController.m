@@ -21,7 +21,11 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     [CCPAuthorsAPIManager retrieveAuthorsContainingSearchTerm:@"Laguna"
-                                              networkingError:^(NSError *error)
+                                                      success:^(id result)
+    {
+        NSLog(@"error = %@", result);
+    }
+                                                      failure:^(NSError *error)
     {
         NSLog(@"error = %@", error);
     }];

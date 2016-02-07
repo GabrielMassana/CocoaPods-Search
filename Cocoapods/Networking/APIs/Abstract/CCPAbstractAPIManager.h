@@ -8,10 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-typedef void (^CCPNetworkingError)(NSError * error);
+typedef void (^CCPNetworkingOnFailure)(NSError * error);
+typedef void (^CCPNetworkingOnSuccess)(id result);
 
 @interface CCPAbstractAPIManager : NSObject
 
-@property (nonatomic, copy) CCPNetworkingError error;
+@property (nonatomic, copy) CCPNetworkingOnFailure onFailure;
+@property (nonatomic, copy) CCPNetworkingOnSuccess onSuccess;
 
 @end

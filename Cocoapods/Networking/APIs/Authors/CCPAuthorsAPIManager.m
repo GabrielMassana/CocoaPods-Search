@@ -11,7 +11,8 @@
 @implementation CCPAuthorsAPIManager
 
 + (void)retrieveAuthorsContainingSearchTerm:(NSString *)searchTerm
-                            networkingError:(CCPNetworkingError)networkingError
+                                    success:(CCPNetworkingOnSuccess)success
+                                    failure:(CCPNetworkingOnFailure)failure
 {
     CNMRequest *request = [[CNMRequest alloc] init];
     
@@ -24,7 +25,16 @@
 
     task.onCompletion = ^void(NSData *data, NSURLResponse *response, NSError *error)
     {
-        if (!error)
+        if (error)
+        {
+            NSLog(@"error = %@", error);
+
+            if (failure)
+            {
+                failure(error);
+            }
+        }
+        else
         {
             // Raw data to JSON.
             NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data
@@ -33,15 +43,11 @@
             
             //Parse json
             NSLog(@"json = %@", json);
-        }
-        else
-        {
-            NSLog(@"error = %@", error);
-        }
-        
-        if (networkingError)
-        {
-            networkingError(error);
+            
+            if (success)
+            {
+                success(nil);
+            }
         }
     };
     
