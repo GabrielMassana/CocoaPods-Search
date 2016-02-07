@@ -24,7 +24,6 @@
                                     networkingError:^(NSError *error)
     {
         NSLog(@"error = %@", error);
-
     }];
 }
 
