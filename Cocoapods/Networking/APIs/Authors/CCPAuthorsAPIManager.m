@@ -10,13 +10,13 @@
 
 @implementation CCPAuthorsAPIManager
 
-+ (void)retrieveAuthorsWithString:(NSString *)string
-                  networkingError:(CCPNetworkingError)networkingError
++ (void)retrieveAuthorsContainingSearchTerm:(NSString *)searchTerm
+                            networkingError:(CCPNetworkingError)networkingError
 {
     CNMRequest *request = [[CNMRequest alloc] init];
     
     //TODO scape space to %20author:
-    NSString *stringURL = [NSString stringWithFormat:@"https://search.cocoapods.org/api/v1/pods.flat.hash.json?query=author:%@", string];
+    NSString *stringURL = [NSString stringWithFormat:@"https://search.cocoapods.org/api/v1/pods.flat.hash.json?query=author:%@", searchTerm];
     
     request.URL = [NSURL URLWithString:stringURL];
     
