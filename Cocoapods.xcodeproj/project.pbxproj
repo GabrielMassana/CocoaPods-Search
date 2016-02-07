@@ -18,6 +18,8 @@
 		7AB0396B1C6551D4004AC370 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AB039601C6551D4004AC370 /* Assets.xcassets */; };
 		7AB0396D1C6551D4004AC370 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AB039641C6551D4004AC370 /* main.m */; };
 		7AB039711C6552DB004AC370 /* CCPRootTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AB039701C6552DB004AC370 /* CCPRootTabBarController.m */; };
+		7AD4DB921C6742D900B457EF /* CCPAuthorsAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD4DB911C6742D900B457EF /* CCPAuthorsAPIManager.m */; };
+		7AD4DB961C674F3F00B457EF /* CCPAbstractAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD4DB951C674F3F00B457EF /* CCPAbstractAPIManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,10 @@
 		7AB039641C6551D4004AC370 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7AB0396F1C6552DB004AC370 /* CCPRootTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCPRootTabBarController.h; sourceTree = "<group>"; };
 		7AB039701C6552DB004AC370 /* CCPRootTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCPRootTabBarController.m; sourceTree = "<group>"; };
+		7AD4DB901C6742D900B457EF /* CCPAuthorsAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCPAuthorsAPIManager.h; sourceTree = "<group>"; };
+		7AD4DB911C6742D900B457EF /* CCPAuthorsAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCPAuthorsAPIManager.m; sourceTree = "<group>"; };
+		7AD4DB941C674F3F00B457EF /* CCPAbstractAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCPAbstractAPIManager.h; sourceTree = "<group>"; };
+		7AD4DB951C674F3F00B457EF /* CCPAbstractAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCPAbstractAPIManager.m; sourceTree = "<group>"; };
 		8F2E784DE41FE0926737846C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		97E734B328C81475DF4C0753 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -165,7 +171,7 @@
 				7AB039571C6551D4004AC370 /* Categories */,
 				7AB039581C6551D4004AC370 /* Managers */,
 				7AB039591C6551D4004AC370 /* Model */,
-				7AB0395D1C6551D4004AC370 /* Networking */,
+				7AD4DB8D1C6741E400B457EF /* Networking */,
 				7AB0395E1C6551D4004AC370 /* Resources */,
 				7AB039621C6551D4004AC370 /* SupportingFiles */,
 				7AB039651C6551D4004AC370 /* TabBarController */,
@@ -239,13 +245,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		7AB0395D1C6551D4004AC370 /* Networking */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Networking;
-			sourceTree = "<group>";
-		};
 		7AB0395E1C6551D4004AC370 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -303,6 +302,41 @@
 			children = (
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		7AD4DB8D1C6741E400B457EF /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				7AD4DB8E1C6741E400B457EF /* APIs */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		7AD4DB8E1C6741E400B457EF /* APIs */ = {
+			isa = PBXGroup;
+			children = (
+				7AD4DB931C674F2B00B457EF /* Abstract */,
+				7AD4DB8F1C67420A00B457EF /* Authors */,
+			);
+			path = APIs;
+			sourceTree = "<group>";
+		};
+		7AD4DB8F1C67420A00B457EF /* Authors */ = {
+			isa = PBXGroup;
+			children = (
+				7AD4DB901C6742D900B457EF /* CCPAuthorsAPIManager.h */,
+				7AD4DB911C6742D900B457EF /* CCPAuthorsAPIManager.m */,
+			);
+			path = Authors;
+			sourceTree = "<group>";
+		};
+		7AD4DB931C674F2B00B457EF /* Abstract */ = {
+			isa = PBXGroup;
+			children = (
+				7AD4DB941C674F3F00B457EF /* CCPAbstractAPIManager.h */,
+				7AD4DB951C674F3F00B457EF /* CCPAbstractAPIManager.m */,
+			);
+			path = Abstract;
 			sourceTree = "<group>";
 		};
 		B35DA8CFB98AC2E80648C7A2 /* Pods */ = {
@@ -465,6 +499,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A5E35151C65559A0087ED40 /* CCPAuthorViewController.m in Sources */,
+				7AD4DB921C6742D900B457EF /* CCPAuthorsAPIManager.m in Sources */,
 				7A3E25781C656EDC00006313 /* CCPPodsViewController.m in Sources */,
 				7A3060A91C66940F009025D3 /* UIColor+CCPColor.m in Sources */,
 				7AB0396D1C6551D4004AC370 /* main.m in Sources */,
@@ -472,6 +507,7 @@
 				7AB039711C6552DB004AC370 /* CCPRootTabBarController.m in Sources */,
 				7A3060AC1C669446009025D3 /* UIColor+CCPHex.m in Sources */,
 				7AB0396A1C6551D4004AC370 /* CCPAppDelegate.m in Sources */,
+				7AD4DB961C674F3F00B457EF /* CCPAbstractAPIManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

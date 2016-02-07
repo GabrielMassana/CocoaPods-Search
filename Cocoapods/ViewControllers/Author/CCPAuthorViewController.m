@@ -8,6 +8,8 @@
 
 #import "CCPAuthorViewController.h"
 
+#import "CCPAuthorsAPIManager.h"
+
 @implementation CCPAuthorViewController
 
 #pragma mark - ViewLifecycle
@@ -17,6 +19,13 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor whiteColor];
+    
+    [CCPAuthorsAPIManager retrieveAuthorsWithString:@"Laguna"
+                                    networkingError:^(NSError *error)
+    {
+        NSLog(@"error = %@", error);
+
+    }];
 }
 
 @end
