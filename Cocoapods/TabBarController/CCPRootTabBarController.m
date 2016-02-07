@@ -11,7 +11,6 @@
 #import "CCPAuthorViewController.h"
 #import "CCPPodsViewController.h"
 #import "CCPSettingsViewController.h"
-#import "UIColor+CCPColor.h"
 
 @interface CCPRootTabBarController ()
 
