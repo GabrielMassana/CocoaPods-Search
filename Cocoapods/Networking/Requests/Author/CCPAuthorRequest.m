@@ -10,6 +10,8 @@
 
 @implementation CCPAuthorRequest
 
+#pragma mark - AuthorRequest
+
 + (instancetype)requestToSearchAuthorWithSearchTerm:(NSString *)searchTerm
 {
     CCPAuthorRequest *request = [self requestForAPI];
@@ -20,7 +22,7 @@
     
     for (NSInteger index = 0; index < terms.count; index++)
     {
-        NSString *term = @"";
+        NSString *term = nil;
         
         if (index == 0)
         {
